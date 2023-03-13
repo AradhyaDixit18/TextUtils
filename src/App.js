@@ -31,7 +31,7 @@ function App() {
       setmode("dark");
       document.body.style.backgroundColor = "#042743";
       document.body.style.color = "white";
-      document.getElementById("myBox").style.background = "#7f8c8d";
+      document.getElementById("myBox").style.background = "#13466e";
       showAlert("Dark Mode Enabled", "Success");
       document.title = "TextUtils-Dark Mode";
     } else {
@@ -53,7 +53,7 @@ function App() {
         <div className="container my-3">
           <Switch>
             <Route path="/about">
-            <AboutUs />
+            <AboutUs mode={mode} />
             </Route>
             <Route path="/">
               <TextForm

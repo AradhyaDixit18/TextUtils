@@ -60,35 +60,35 @@ export default function TextForm(props) {
             rows="8"
           ></textarea>
         </div>
-        <button className="btn btn-primary mx-3" onClick={handleUpClick}>
+        <button className="btn btn-primary mx-3 my-3" onClick={handleUpClick}>
           Uppercase
         </button>
-        <button className="btn btn-primary mx-3" onClick={handleDownClick}>
+        <button className="btn btn-primary mx-3 my-3" onClick={handleDownClick}>
           Lowercase
         </button>
-        <button className="btn btn-primary mx-3" onClick={handleReverse}>
+        <button className="btn btn-primary mx-3 my-3" onClick={handleReverse}>
           Reverse
         </button>
-        <button className="btn btn-primary mx-3" onClick={handleSpaceClick}>
+        <button className="btn btn-primary mx-3 my-3" onClick={handleSpaceClick}>
           Remove Spaces
         </button>
-        <button className="btn btn-primary mx-3" onClick={handleIt}>
+        <button className="btn btn-primary mx-3 my-3" onClick={handleIt}>
           𝑰
         </button>
   
-        <button className="btn btn-primary mx-3" onClick={Copy}>
+        <button className="btn btn-primary mx-3 my-3" onClick={Copy}>
           Copy Text
         </button>
-        <button className="btn btn-primary mx-3" onClick={handleClear}>
+        <button className="btn btn-primary mx-3 my-3" onClick={handleClear}>
           Clear Text
         </button>
       </div>
       <div className="container my-3">
         <h2>Text Summary:</h2>
         <p>
-          {text.split(" ").length} words , {text.length} characters
+          {text.split(" ").filter((element) =>{return element.length!== 0}).length} words , {text.length} characters
         </p>
-        <p>{0.008 * text.split(" ").length} Minutes to read </p>
+        <p>{0.008 * text.split(" ").filter((element) =>{return element.length!== 0}).length} Minutes to read </p>
         <h2>Preview:</h2>
         <p>{text}</p>
       </div>

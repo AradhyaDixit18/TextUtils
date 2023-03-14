@@ -32,6 +32,7 @@ function App() {
       document.body.style.backgroundColor = "#042743";
       document.body.style.color = "white";
       document.getElementById("myBox").style.background = "#13466e";
+      document.getElementById("myBox").style.color = "white";
       showAlert("Dark Mode Enabled", "Success");
       document.title = "TextUtils-Dark Mode";
     } else {
